@@ -1,0 +1,3 @@
+{
+    cout << "Hello, world!" << endl;
+}
