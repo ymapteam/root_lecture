@@ -1,6 +1,6 @@
 # ROOTのインストール方法
 
- - ![Mac (Intel, apple silicon)](./mac.md)
+ - [Mac (Intel, apple silicon)](./mac.md)
 
  - Windows
 	- WSL2 でのビルド
