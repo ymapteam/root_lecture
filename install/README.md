@@ -1,8 +1,6 @@
 # ROOTのインストール方法
 
- - Mac (Intel, apple silicon)
-	- バイナリのビルド
-	- homebrewでのインストール
+ - ![Mac (Intel, apple silicon)](./mac.md)
 
  - Windows
 	- WSL2 でのビルド
