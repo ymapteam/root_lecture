@@ -7,7 +7,7 @@ ROOT講習会のためにどれかひとつインストールして, 使える�
 
 ## VSCode
 最近人気のeditorで, 最初のeditorとしておすすめです.
-![VSCode}(./img/vscode1.png)
+![VSCode](./img/vscode1.png)
 Windowsでは, [ここ](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)からダウンロードできます.
 Macでは, homebrewがインストールされていれば, `brew install --cask visual-studio-code` でインストールできます.
 
@@ -15,7 +15,7 @@ Macでは, homebrewがインストールされていれば, `brew install --cask
 
 ## Vim (vi)
 私(@mzks)が普段使っているエディターで, 長い歴史のあるエディターです.
-![Vim}(./img/vim1.png)
+![Vim](./img/vim1.png)
 最初は操作が難しいですが, 慣れれば非常に効率よく編集を行うことができます.
 また, terminal上で動くので, editor画面を改めて立ち上げる必要がありません.
 インストールは, WSL上であれば, `apt install vim`, Macでは`brew install vim`で入ります.
