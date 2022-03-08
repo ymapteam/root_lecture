@@ -121,8 +121,19 @@ echo "cd" >> .zprofile
 root [0]
 ```
 
+## (おまけ1) Fishを使っている場合.
+`~/.config/fish/config.fish`に書く.
+```
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    eval (/opt/homebrew/bin/brew shellenv)
 
-## (おまけ) Jupyter labを使う方法
+    source /Users/mzks/local/root/6.26.0/bin/thisroot.fish
+end
+```
+
+
+## (おまけ2) Jupyter labを使う方法
 まずNode.jsを入れる.
 ```
 brew install nodebrew
