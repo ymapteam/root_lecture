@@ -43,9 +43,11 @@ ROOTを簡単に実行するためのbatファイルを作る。
 
 ファイルを右クリックし、編集をおすと、編集できるので、
 
+```
 @echo off
 call C:\root_v6.26.00\bin\thisroot.bat
 cmd /k
+```
 
 と記述し保存する。
 
