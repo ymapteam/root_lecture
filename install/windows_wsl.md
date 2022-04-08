@@ -113,3 +113,8 @@ $ xeyes
 ```
 
 注: Ubuntu上のROOTでグラフを表示させるなどのGUIを使う前に、必ず上記の方法でVcXsrv(VcXsrv->XLaunch)の起動を確認しておく。確認方法はタスクバーで「X」っぽい表示のアイコンがあることを確認する。`Can't open display: :0.0`というエラーが出たら上記の通りVcXsrvを起動する。
+
+[ROOT6のビルド済みバイナリーを導入する](windows_wsl_binary.md)
+又は
+[ROOT6をビルド・インストールする](windows_wsl_build.md)
+へ
