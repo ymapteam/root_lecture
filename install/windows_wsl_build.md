@@ -43,7 +43,7 @@ $ sudo apt -y install libgsl-dev
 cmakeする。`-Droofit=OFF`でroofitのビルドをオフにしているのは、[v6.26.00時点での既知のバグ](https://root-forum.cern.ch/t/error-compiling-with-ubuntu-20-04-4-lts/49097/3)を回避するためである。[ビルドオプション](https://root.cern/install/build_from_source/#all-build-options)はCERN公式ページを参照。
 
 ```
-$ cmake ../root-6.26.00 -DCMAKE_INSTALL_PREFIX=/opt/root/6.26.00 -Droofit=OFF
+$ cmake ../root-6.26.00 -DCMAKE_INSTALL_PREFIX=~/local/root -Droofit=OFF
 ```
 
 最後の方で以下のように出力されてれば成功
@@ -67,7 +67,7 @@ $ sudo make install
 ROOTにパスを通すため、`~/.bashrc`の末尾に以下の4行を追記する。
 
 ```
-export ROOTSYS=/opt/root/6.26.00
+export ROOTSYS=~/local/root
 cd $ROOTSYS
 source bin/thisroot.sh
 cd - > /dev/null
