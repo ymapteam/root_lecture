@@ -7,7 +7,7 @@ ROOTは欧州原子核研究機構(CERN)によって開発されているデー�
 
 本リポジトリには講習会で用いるデータやマクロ例が含まれます.
 
-YMAP イベントページ http://www.icrr.u-tokyo.ac.jp/YMAP/event/root2022/index.html
+2022年 YMAP イベントページ http://www.icrr.u-tokyo.ac.jp/YMAP/event/root2022/index.html
 
 ## 参加方法
 
@@ -15,7 +15,7 @@ YMAP イベントページ http://www.icrr.u-tokyo.ac.jp/YMAP/event/root2022/ind
 Wikiをご参照ください. [Wiki](https://github.com/ymap-team/ROOT2021/wiki)
 
 また, ROOT講習会第1回までにROOTのインストールをお願いします。
-それぞれの環境へのインストールガイドはこちらです.[MacOS](https://github.com/ymap-team/ROOT2021/wiki/Install_ROOT_Intel_Mac), [Windows](https://github.com/ymap-team/ROOT2021/wiki/Install_ROOT_Windows-Ubuntu-20.04)
+それぞれの環境へのインストールガイドはこちらです.-> [インストールガイド](./install)
 うまくいかなければ, Slackの`#質問` チャンネルで質問してください。
 また、第0回で、インストールについて解説します。
 
@@ -23,26 +23,33 @@ Wikiをご参照ください. [Wiki](https://github.com/ymap-team/ROOT2021/wiki)
 
 講習会は以下の日程で行います。この日程で都合の合わない方向けに、録画した動画も事後配信します。閲覧方法は登録された方に連絡します。
 
-### 第0回 2022/xx/xxxx (x) 17:00--19:00
-* 講師 水越彗太 (mzks@stu.kobe-u.ac.jp)
+### 第0回 2022/xx/xx (x) 17:00--19:00
+* 講師 水越彗太 (mizukoshi.keita@jaxa.jp)
 * CUI環境入門, ROOTのインストール
-* [資料](https://github.com/ymap-team/ROOT2021/files/6371994/root_lec_2021_mzks_day0.pdf)
+* [資料](./materials/root_lec_mzks_day0.pdf)
 
 ### 第1回 2022/xx/xx (x) 17:00--19:00 (延長あり)
-* 講師 水越彗太 (mzks@stu.kobe-u.ac.jp)
+* 講師 水越彗太 (mizukoshi.keita@jaxa.jp)
 * 解析環境, 解析のすすめかた, ROOTマクロ
+* [資料](./materials/root_lec_mzks_day1.pdf)
+
 ### 第2回 2022/xx/xx (x) 17:00--19:00 (延長あり)
 * 講師 水越彗太 (mzks@stu.kobe-u.ac.jp)
 * 統計基礎, ヒストグラム
+* [資料](./materials/root_lec_mzks_day2.pdf)
+
 ### 第3回 2022/xx/xx (x) 17:00--19:00 (延長あり)
 * 講師 中村輝石（kiseki@epx.phys.tohoku.ac.jp）
 * フィッティング，グラフ
+
 ### 第4回 2022/xx/xx (x) 17:00--19:00 (延長あり)
 * 講師 高橋光成（）
 * TTree，2Dヒストグラム
+
 ### 第5回 2022/xx/xx (x) 17:00--19:00 (延長あり)
-* 講師 濱田（）
+* 講師 濱田悠斗 (hamada@stu.kobe-u.ac.jp)
 * pyroot
+
 ### 予備回 日程調整中
 * 講師 調整中
 

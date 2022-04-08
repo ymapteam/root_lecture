@@ -5,8 +5,10 @@
  - [Mac (Intel, apple silicon)](./mac.md)
 
  - Windows
-	- WSL2 でのビルド
-	- Windows binary
+	- [WSLを使う方法](./windows_wsl.md) [推奨]
+	- [バイナリを落としてくる方法](./windows_binary.md)
 
  - Linux (Ubuntu)
-	- バイナリのビルド
+	- バイナリのビルド 
+	(自力で頑張ってみてください. サポートはします.)
+

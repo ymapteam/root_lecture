@@ -45,7 +45,7 @@ brew install --cask xquartz
 最初は, この後の方法でインストールすることをお勧めします.
 もしどうしてもインストールできなければ, このコマンドを試してください.
 
- ## pythonの設定
+ ## (Option) pythonの設定
 pythonはmacであればすでにインストールされています.
 以下のコマンドで, numpyなど, 基本的なツールをインストールしてください.
 ```
@@ -132,39 +132,4 @@ if status is-interactive
 end
 ```
 
-
-## (おまけ2) Jupyter labを使う方法
-まずNode.jsを入れる.
-```
-brew install nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-/opt/homebrew/opt/nodebrew/bin/nodebrew setup_dirs
-nodebrew install-binary stable
-```
-
-```
-mzks@mzks-mbp ~ % nodebrew ls
-v16.14.0
-
-current: none
-mzks@mzks-mbp ~ % nodebrew use v16.14.0
-use v16.14.0
-mzks@mzks-mbp ~ % nodebrew ls
-v16.14.0
-```
-nodeが入ると, jupyterlabのインストールをする.
-```
-python3 -m pip install jupyterlab
-```
-
-`jupyter lab build`を叩いて, 成功すれば,
-`jupyter lab`でJupyterが起動する.
-
-python kernelを選んで, `import ROOT`ができれば, 以下の出力が確認できる.
-```
-Welcome to JupyROOT 6.26/00
-```
-
-
-[TODO] あれ, jupyter labは立つけど, ROOT kernelは立たないな...
 
