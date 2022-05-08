@@ -16,6 +16,8 @@ Macでは, homebrewがインストールされていれば, `brew install --cask
 WSL上のファイルを開くために拡張機能をインストールします。
 VSCodeのウィンドウの左側にアイコンがいくつか並んでいます。そのうちの四角形が4つ並んでいるアイコンをクリックしてWSLと検索します。おそらく一番上に出てくる拡張機能 "Remote - WSL" をインストールします。
 正常にインストールできていれば、コマンドパレットから`Remote-WSL: New WSL Window`を実行することでVSCodeからWSL環境に入ることができると思います。
+![VSCodePlugin](./img/wsl_plugin.png)
+
 #### ShellにVSCodeのパスを通す
 コマンドライン上からVSCodeを起動するためにパスを通します。
 VSCodeを起動してCtrl (Cmd) + Shift + Pでコマンドパレットを開きます。コマンドパレットではVSCodeの各種操作をマウスを使うことなく実行できます。コマンドパレット上で shell と検索し`Shell Command: Install 'code' command in PATH`を実行します。これでパスが通ったので再度コマンドパレットを起動し`Terminal: Focus on Terminal View`を実行してVSCode内でターミナルを起動します。
