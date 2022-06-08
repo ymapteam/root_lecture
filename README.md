@@ -53,7 +53,8 @@ Zoomの配信情報はどなたでも確認いただけますが、質問等は�
 
 ### 第5回 2022/06/08 (x) 17:00--19:00 (延長あり)
 * 講師 濱田悠斗 (hamada@stu.kobe-u.ac.jp)
-* pyroot
+* [資料](./materials/root_lec_hamada_day5.pdf)
+* PyROOT
 
 ### 予備回 未定
 * 講師 未定
