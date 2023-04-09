@@ -1,10 +1,12 @@
 # MacでのROOTのインストール
+* [インストール向け資料](./materials/root_lec_mzks_install.pdf)
 
 Mac上でROOTをビルド(コンパイル)します.
 難度はやや高めです.
 
- ## XCodeのインストール
-AppStoreからXCodeをインストールし, 起動します. 
+ ## ソフトウェアアップデートとXCodeのインストール
+**まず, Mac のソフトウェアアップデートを行なってください.**
+次に, AppStoreからXCodeをインストールし, 起動します. 
 最初はLicenceの承諾を要求されるので, 認めてください.
 ![XCodeのインストール](img/mac_1.png)
 
@@ -25,7 +27,7 @@ Enterキーをおすと, homebrewのインストールが始まります.
 インストールが終わると, 最後の設定についての指示がされます.
 指示に従って, 以下の二行をコピー&ペーストしてそれぞれEnterキーを押して実行してください.
 ```
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/mzks/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 これでhomebrewのインストールは完了です.
@@ -36,7 +38,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 homebrewが入っていれば, 簡単にインストールすることができます.
 以下のコマンドを実行してください.
 ```
-brew install gcc cmake wget 
+brew install gcc cmake
 brew install --cask xquartz
 ```
 
@@ -53,7 +55,7 @@ python3 -m pip install --upgrade pip setuptools wheel
 python3 -m pip install numpy scipy matplotlib pandas
 ```
 
-`python3`と打つとpythonが起動し, 
+`python3`と打つとpythonが起動します.
 
 以下は上級者向けのコメントなので, 初心者はこの項目を読み飛ばしてください.
 とりあえずbuilt-in pythonを使いますが, 適宜好きなpythonを使って構いません.
@@ -71,38 +73,55 @@ export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
 
 
  ## ROOTのインストール
-まず, インストール場所を用意して,ROOTの最新版をダウンロードしてきます.
+まず, インストール場所を用意します.
 ```
-cd
-mkdir -p local/root/6.26.0/build
-cd local/root/6.26.0/build
-wget https://root.cern/download/root_v6.26.00.source.tar.gz
-tar xzvf root_v6.26.00.source.tar.gz
+cd && mkdir root_build && cd root_build
 ```
-`ls`などのコマンドで今のディレクトリ以下を見ると,`root-6.26.00`ができているはずです.
+ROOTの最新版をダウンロードします.
 ```
-mkdir build
-cd build
-cmake ../root-6.26.00 -DCMAKE_INSTALL_PREFIX=/Users/mzks/local/root/6.26.0 -Dall=ON
-make
+git clone --branch latest-stable --depth=1 https://github.com/root-project/root.git root_src
 ```
-mzksのところは, あなたのユーザー名に読み替えてください. `whoami`というコマンドで確認できます.
-makeにはそれなりに時間がかかります.
+`ls`などのコマンドで今のディレクトリ以下を見ると,`root_src`ができているはずです.
+ビルドのための設定をcmakeで行います.
+```
+cmake -B build -S root_src -DCMAKE_INSTALL_PREFIX=~/local/root/6.26.10
+```
+最後に, 
+```
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /あなたの環境/build
+```
+などと表示されれば設定完了です.
+実際にビルドします.
+```
+cmake --build build -j4
+```
+以前は, makeという別のツールを使っていましたが, cmake自体でビルドができるようになっています.
+`-j4`はビルドする時の並列数で, コンピューターの性能に応じて適宜増やしてください.
+よくわからなければコピペで大丈夫です.
 
 エラーなく終了したら, そのまま, 以下のコマンドで作ったファイルを移動します.
 ```
-make install
+cmake --install build
 ```
 
  ## PATHを通す
 `.zprofile`に, PATHを追記します.
 PATHとはコマンドを探してくる場所のリストです.
+`.zprofile` に以下を記述して保存してください.
+但し, mzksなどのユーザー名は自分のものに適宜読み替えてください.
+ファイルがなければ新規作成し, あれば下の方に追記すればOKです.
+```
+cd /Users/mzks/local/root/6.26.10/bin
+source thisroot.sh
+cd
+```
 
 よくわからなければ, 以下のコマンドを実行してください.
-但し, mzksなどのユーザー名は自分のものに適宜読み替えてください.
 ```
 cd
-echo "cd /Users/mzks/local/root/6.26.0/bin" >> .zprofile
+echo "cd /Users/mzks/local/root/6.26.10/bin" >> .zprofile
 echo "source thisroot.sh" >> .zprofile
 echo "cd" >> .zprofile
 ```
@@ -110,10 +129,10 @@ echo "cd" >> .zprofile
 ここで, ターミナルを再起動して, `root`と打ち込んでEnterキーを押し, 以下の出力が出てこれば成功です.
 ```
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.26/00                        https://root.cern |
+  | Welcome to ROOT 6.26/10                        https://root.cern |
   | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
   | Built for macosxarm64 on Mar 03 2022, 06:51:13                   |
-  | From tags/v6-26-00@v6-26-00                                      |
+  | From tags/v6-26-00@v6-26-10                                      |
   | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
   | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
    ------------------------------------------------------------------
@@ -128,7 +147,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     eval (/opt/homebrew/bin/brew shellenv)
 
-    source /Users/mzks/local/root/6.26.0/bin/thisroot.fish
+    source /Users/mzks/local/root/6.26.10/bin/thisroot.fish
 end
 ```
 
