@@ -13,7 +13,7 @@ Installerのインストールが終わると、ワークロードを選択す�
 
 ## ROOTのインストール
 
-[root_v6.26.00.win32.vc16.exe](https://root.cern/download/root_v6.26.00.win32.vc16.exe) 105MBをダウンロードする。安全かどうか聞かれるが、安全だと思う場合は保存する。
+[root_v6.26.00.win32.vc16.exe](https://root.cern/download/root_v6.26.00.win32.vc16.exe) 105MBをダウンロードする。安全かどうか聞かれるが、安全だと思うので保存する。
 
 root_v6.26.00.win32.vc16.exe を実行する。WindowsによってPCが保護されましたと出るが、安全だと思う場合は「詳細情報」をクリックして「実行」する。
 
