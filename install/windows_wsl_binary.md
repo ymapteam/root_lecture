@@ -18,8 +18,8 @@ CERNはROOTをUbuntu上で動かせる実行ファイルを提供してくれて
 cd ~
 mkdir local
 cd local
-wget https://root.cern/download/root_v6.26.00.Linux-ubuntu20-x86_64-gcc9.3.tar.gz
-tar -xzvf root_v6.26.00.Linux-ubuntu20-x86_64-gcc9.3.tar.gz
+wget https://root.cern/download/root_v6.26.10.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+tar -xzvf root_v6.26.10.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
 ```
 
 ROOTにパスを通すため、`~/.bashrc`の末尾に以下の4行を追記する。
@@ -49,11 +49,11 @@ $ root
 
 ```
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.26/00                        https://root.cern |
+  | Welcome to ROOT 6.26/10                        https://root.cern |
   | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
-  | Built for linuxx8664gcc on Mar 03 2022, 06:51:13                 |
-  | From tags/v6-26-00@v6-26-00                                      |
-  | With c++ (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0                    |
+  | Built for linuxx8664gcc on Nov 16 2022, 10:42:54                 |
+  | From tags/v6-26-10@v6-26-10                                      |
+  | With c++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0                   |
   | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
    ------------------------------------------------------------------
 
