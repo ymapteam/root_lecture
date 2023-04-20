@@ -2,6 +2,8 @@
 
 ## ROOT6をビルド・インストールする
 
+注意: cmakeとビルドには計数時間がかかる。時間があるときに取り組みましょう。
+
 ROOT6をビルドしない場合は[ROOT6のビルド済みバイナリーを導入する](windows_wsl_binary.md)へ。
 
 詳細は[CERNのBuilding ROOT](https://root.cern.ch/building-root)を参考にして欲しい。
@@ -12,11 +14,11 @@ ROOTのソースコードをホームディレクトリにダウンロードし�
 $ cd ~
 $ mkdir root_build
 $ cd root_build
-$ wget https://root.cern/download/root_v6.26.00.source.tar.gz
-$ tar zxvf root_v6.26.00.source.tar.gz
+$ wget https://root.cern/download/root_v6.26.10.source.tar.gz
+$ tar zxvf root_v6.26.10.source.tar.gz
 $ mkdir build
 $ ls
-# build  root-6.26.00  root_v6.26.00.source.tar.gz と出力されるはず
+# build  root-6.26.10  root_v6.26.10.source.tar.gz と出力されるはず
 $ cd build/
 ```
 
@@ -40,28 +42,35 @@ mathmoreを使うために必要なパッケージ1つ
 $ sudo apt -y install libgsl-dev
 ```
 
-cmakeする。`-Droofit=OFF`でroofitのビルドをオフにしているのは、[v6.26.00時点での既知のバグ](https://root-forum.cern.ch/t/error-compiling-with-ubuntu-20-04-4-lts/49097/3)を回避するためである。[ビルドオプション](https://root.cern/install/build_from_source/#all-build-options)はCERN公式ページを参照。
+高速なビルドシステムであるNinjaパッケージ
 
 ```
-$ cmake ../root-6.26.00 -DCMAKE_INSTALL_PREFIX=~/local/root -Droofit=OFF
+$ sudo apt -y install ninja-build
+```
+
+Ninjaビルドシステム用にcmakeする。それなりに時間がかかる。
+
+```
+$ cmake -GNinja ../root-6.26.10 -DCMAKE_INSTALL_PREFIX=~/local/root
 ```
 
 最後の方で以下のように出力されてれば成功
-> -- Enabled support for:  asimage builtin_afterimage builtin_clang builtin_cling builtin_llvm builtin_lz4 builtin_lzma builtin_nlohmannjson builtin_openssl builtin_openui5 builtin_pcre builtin_tbb builtin_vdt builtin_xrootd builtin_xxhash builtin_zstd clad dataframe exceptions gdml http imt mathmore mlp minuit2 opengl pyroot rpath runtime_cxxmodules shared ssl tmva tmva-cpu spectrum vdt x11 xrootd<br>
+> -- Enabled support for:  asimage builtin_afterimage builtin_clang builtin_cling builtin_llvm builtin_lz4 builtin_lzma builtin_nlohmannjson builtin_openui5 builtin_pcre builtin_tbb builtin_vdt builtin_xrootd builtin_xxhash builtin_zstd clad dataframe exceptions gdml http imt mathmore mlp minuit2 opengl pyroot roofit webgui root7 rpath runtime_cxxmodules shared ssl tmva tmva-cpu spectrum vdt x11 xrootd<br>
 > -- Configuring done<br>
 > -- Generating done<br>
 > -- Build files have been written to: /home/physics/root_build/build
 
-makeする。かなりの時間がかかる。makeを並列化して速くするには、自分のパソコンのCPUのスレッド数 n_thread とするとオプション `-j n_thread`を付けてmakeするとよい。例えば8スレッドある場合は`$ make -j 8`とする。ただし、並列化した分だけメモリを多く使用するので、メモリが潤沢ではないPCでは並列度は上げすぎない方が良い。
+Ninjaでビルドする。CPU使用率は100%になるので、ビルド中に他の作業はできないだろう。それなりに時間がかかる。
+warningがいくつか出るが無視して良い。
 
 ```
-$ make
+$ ninja
 ```
 
-インストールする
+インストールする。
 
 ```
-$ sudo make install
+$ sudo ninja install
 ```
 
 ROOTにパスを通すため、`~/.bashrc`の末尾に以下の4行を追記する。
@@ -91,11 +100,11 @@ $ root
 
 ```
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.26/00                        https://root.cern |
+  | Welcome to ROOT 6.26/10                        https://root.cern |
   | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
-  | Built for linuxx8664gcc on Mar 03 2022, 06:51:13                 |
-  | From tags/v6-26-00@v6-26-00                                      |
-  | With c++ (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0                   |
+  | Built for linuxx8664gcc on Nov 16 2022, 10:42:54                 |
+  | From tags/v6-26-10@v6-26-10                                      |
+  | With c++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0                   |
   | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
    ------------------------------------------------------------------
 
