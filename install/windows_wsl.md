@@ -1,4 +1,4 @@
-## Ubuntu 20.04 LTSのインストール
+## Ubuntu 22.04 LTSのインストール
 
 WindowsにUbuntuをインストールする。
 
@@ -26,7 +26,7 @@ WSL カーネル はインストールされました。
 
 
 ```
-Welcome to Ubuntu 20.04 LTS (GNU/Linux 5.10.16.3-microsoft-standard-WSL2 x86_64)
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.90.1-microsoft-standard-WSL2 x86_64)
 
 (中略)
 
@@ -48,9 +48,9 @@ $ cat /etc/lsb-release
 結果:
 ```
 DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=20.04
-DISTRIB_CODENAME=focal
-DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+DISTRIB_RELEASE=22.04
+DISTRIB_CODENAME=jammy
+DISTRIB_DESCRIPTION="Ubuntu 22.04.2 LTS"
 ```
 
 インストールパッケージをアップデートする。 `-y` は途中のYes/No質問を自動で全てYesにするオプション。
@@ -73,7 +73,30 @@ $ sudo apt -y install build-essential cmake
 
 ## GUIを使えるようにする
 
-本記述はWindows 10で検証しています。Windows 11ユーザーの一部には[別の方法](https://docs.microsoft.com/ja-jp/windows/wsl/tutorials/gui-apps)もあるそうです。
+### Windows 11用
+
+Windows 11では、[標準でGUIを使える](https://docs.microsoft.com/ja-jp/windows/wsl/tutorials/gui-apps)ので特別な操作は必要ない。
+
+GUIが使えるか確認するため、`xeyes`を使えるようにする。
+
+```
+$ sudo apt -y install x11-apps
+```
+
+xeyesを実行してマウスを追随する目ん玉が表示されればGUIは利用可能。できない場合はWindows 10用の記述を実行する。
+
+```
+$ xeyes
+```
+
+[ROOT6のビルド済みバイナリーを導入する](windows_wsl_binary.md)
+又は
+[ROOT6をビルド・インストールする](windows_wsl_build.md)
+へ
+
+### Windows 10用
+
+本記述はWindows 10で検証しています。
 
 Windows側にX-Serverとして[VcXsrv](https://sourceforge.net/projects/vcxsrv/)をインストールする。インストール前に色々警告が出るが無視する。
 
