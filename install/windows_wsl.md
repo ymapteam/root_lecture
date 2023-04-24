@@ -4,7 +4,7 @@ WindowsにUbuntuをインストールする。
 
 Microsoft公式の解説: [https://docs.microsoft.com/ja-jp/windows/wsl/install](https://docs.microsoft.com/ja-jp/windows/wsl/install)
 
-PowerShell 又はコマンドプロンプト (以下、ターミナルと呼ぶ)を管理者権限で起動し、以下のコマンドを実行する。(再インストール時は`wsl --install -d Ubuntu`)
+PowerShell 又はコマンドプロンプト (以下、ターミナルと呼ぶ)を管理者権限で起動し、以下のコマンドを実行する。
 
 ```
 wsl --install
@@ -139,3 +139,15 @@ $ xeyes
 又は
 [ROOT6をビルド・インストールする](windows_wsl_build.md)
 へ
+
+## Ubuntuをアンインストールする
+
+Ubuntuを一から構築したいときは、Ubuntuをアンインストールしよう。コマンドは
+
+```
+wsl --unregister Ubuntu
+```
+
+`登録解除。この操作を正しく終了しました。`と出たらアンインストール完了である。警告なしでUbuntu内のファイルは全て消えるので注意。
+
+`wsl --install Ubuntu`からやり直せば良い。再起動は必要ない。
