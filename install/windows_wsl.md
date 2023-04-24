@@ -4,7 +4,7 @@ WindowsにUbuntuをインストールする。
 
 Microsoft公式の解説: [https://docs.microsoft.com/ja-jp/windows/wsl/install](https://docs.microsoft.com/ja-jp/windows/wsl/install)
 
-PowerShell 又はコマンドプロンプトを管理者権限で起動し、以下のコマンドを実行する。(再インストール時は`wsl --install -d Ubuntu`)
+PowerShell 又はコマンドプロンプト (以下、ターミナルと呼ぶ)を管理者権限で起動し、以下のコマンドを実行する。(再インストール時は`wsl --install -d Ubuntu`)
 
 ```
 wsl --install
@@ -22,8 +22,7 @@ WSL カーネル はインストールされました。
 要求された操作は正常に終了しました。変更を有効にするには、システムを再起動する必要があります。
 ```
 
-と出てくるので、パソコンを再起動する。ログインすると「Installing, this may take a few minutes...」と書かれた黒い画面が出てくるのでしばらく待つ。初期化が終わると、ユーザー名とパスワードを入力する。ターミナル(黒い画面)上ではパスワードは表示されないが、正しく入力すれば良い。
-
+と出てくるので、パソコンを再起動する。ターミナルを開き、コマンド`wsl`を実行して、Ubuntuにログインしようとすると「Installing, this may take a few minutes...」と出てくるのでしばらく待つ。初期化が終わると、ユーザー名とパスワードを入力する。ターミナル上ではパスワードは表示されないが、正しく入力すれば良い。
 
 ```
 Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.90.1-microsoft-standard-WSL2 x86_64)
@@ -35,11 +34,10 @@ physics@DESKTOP-AAAAAAA:~$
 
 と出てくればインストール完了である。2回目以降に起動するときは、「Windowsキー+R」からファイル名を指定して実行で「wsl」と入れて実行する。このように実行すると、Windows側のホームディレクトリ「C:\Users\YourName」内がカレントディレクトリ(cd)になる。
 
-上のタイトルバーを右クリックして、プロパティ->オプションから、Ctrl+Shift+C/Vをコピー/貼り付けとして使用するにチェックを入れておく。
 
 ## 事前の準備
 
-Ubuntuのバージョンを確認しておく。以下、`$`から始まるコマンドは、断りのない限りUbuntuの端末上のコマンドである。`$`を入力する必要はない。
+Ubuntuのバージョンを確認しておく。以下、`$`から始まるコマンドは、ターミナル上のUbuntuのコマンドである。`$ `を入力する必要はない。
 
 ```
 $ cat /etc/lsb-release
@@ -96,7 +94,7 @@ $ xeyes
 
 ### Windows 10用
 
-本記述はWindows 10で検証しています。
+本記述はWindows 10用です。
 
 Windows側にX-Serverとして[VcXsrv](https://sourceforge.net/projects/vcxsrv/)をインストールする。インストール前に色々警告が出るが無視する。
 
