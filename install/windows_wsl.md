@@ -88,9 +88,9 @@ xeyesを実行してマウスを追随する目ん玉が表示されればGUIは
 $ xeyes
 ```
 
-[ROOT6のビルド済みバイナリーを導入する](windows_wsl_binary.md)
+[ROOT6のビルド済みバイナリーを導入する・時短](windows_wsl_binary.md)
 又は
-[ROOT6をビルド・インストールする](windows_wsl_build.md)
+[ROOT6をビルド・インストールする・推奨](windows_wsl_build.md)
 へ
 
 ### Windows 10用
@@ -136,9 +136,9 @@ $ xeyes
 
 注: Ubuntu上のROOTでグラフを表示させるなどのGUIを使う前に、必ず上記の方法でVcXsrv(VcXsrv->XLaunch)の起動を確認しておく。確認方法はタスクバーで「X」っぽい表示のアイコンがあることを確認する。`Can't open display: :0.0`というエラーが出たら上記の通りVcXsrvを起動する。
 
-[ROOT6のビルド済みバイナリーを導入する](windows_wsl_binary.md)
+[ROOT6のビルド済みバイナリーを導入する・時短](windows_wsl_binary.md)
 又は
-[ROOT6をビルド・インストールする](windows_wsl_build.md)
+[ROOT6をビルド・インストールする・推奨](windows_wsl_build.md)
 へ
 
 ## Ubuntuをアンインストールする
