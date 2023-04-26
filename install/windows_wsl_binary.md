@@ -28,7 +28,7 @@ source bin/thisroot.sh
 cd - > /dev/null
 ```
 
-ファイルの追記は自分の好きなファイル編集ソフト(例: viやpico)を使えばいい。どうしても分からない人は以下のコマンドを実行する。
+ファイルの追記は自分の好きなテキストエディタ(例: viやpico)を使えばいい。どうしても分からない人は以下のコマンドを実行する。
 ```
 echo "export ROOTSYS=~/local/root" >> ~/.bashrc
 echo "cd \$ROOTSYS" >> ~/.bashrc 
