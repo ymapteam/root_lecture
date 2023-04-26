@@ -9,7 +9,6 @@ ROOT6をビルドしない場合は[ROOT6のビルド済みバイナリーを導
 詳細は[CERNのBuilding ROOT](https://root.cern.ch/building-root)を参考にして欲しい。
 
 ROOTのソースコードをホームディレクトリにダウンロードし、展開する。
-
 ```
 $ cd ~
 $ mkdir root_build
@@ -25,31 +24,26 @@ $ cd build/
 コンパイルに必要な各種パッケージを導入する。
 
 そもそもcmakeに必要なパッケージ5つ
-
 ```
 $ sudo apt -y install python3-dev libx11-dev libxpm-dev libxft-dev libxext-dev libssl-dev
 ```
 
 OpenGLを使うために必要なパッケージ5つ
-
 ```
 $ sudo apt -y install libglu1-mesa-dev freeglut3-dev libgl2ps-dev libglew-dev libftgl-dev
 ```
 
 mathmoreを使うために必要なパッケージ1つ
-
 ```
 $ sudo apt -y install libgsl-dev
 ```
 
 高速なビルドシステムであるNinjaパッケージ
-
 ```
 $ sudo apt -y install ninja-build
 ```
 
 Ninjaビルドシステム用にcmakeする。それなりに時間がかかる。
-
 ```
 $ cmake -GNinja ../root-6.26.10 -DCMAKE_INSTALL_PREFIX=~/local/root
 ```
@@ -62,19 +56,16 @@ $ cmake -GNinja ../root-6.26.10 -DCMAKE_INSTALL_PREFIX=~/local/root
 
 Ninjaでビルドする。CPU使用率は100%になるので、ビルド中に他の作業はできないだろう。それなりに時間がかかる。
 warningがいくつか出るが無視して良い。
-
 ```
 $ ninja
 ```
 
 インストールする。
-
 ```
 $ sudo ninja install
 ```
 
 ROOTにパスを通すため、`~/.bashrc`の末尾に以下の4行を追記する。
-
 ```
 export ROOTSYS=~/local/root
 cd $ROOTSYS
@@ -82,8 +73,15 @@ source bin/thisroot.sh
 cd - > /dev/null
 ```
 
-`~/.bashrc` を再読み込み
+ファイルの追記は自分の好きなテキストエディタ(例: viやpico)を使えばいい。どうしても分からない人は以下のコマンドを実行する。
+```
+echo "export ROOTSYS=~/local/root" >> ~/.bashrc
+echo "cd \$ROOTSYS" >> ~/.bashrc 
+echo "source bin/thisroot.sh" >> ~/.bashrc
+echo "cd - > /dev/null" >> ~/.bashrc
+```
 
+`~/.bashrc` を再読み込み
 ```
 $ source ~/.bashrc
 ```
@@ -91,13 +89,11 @@ $ source ~/.bashrc
 ## ROOTの起動の確認
 
 ROOTを起動する。
-
 ```
 $ root
 ```
 
 以下のように表示されればOK。
-
 ```
    ------------------------------------------------------------------
   | Welcome to ROOT 6.26/10                        https://root.cern |
