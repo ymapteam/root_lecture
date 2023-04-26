@@ -81,6 +81,7 @@ ROOTの最新版をダウンロードします.
 ```
 git clone --branch latest-stable --depth=1 https://github.com/root-project/root.git root_src
 ```
+
 `ls`などのコマンドで今のディレクトリ以下を見ると,`root_src`ができているはずです.
 ビルドのための設定をcmakeで行います.
 ```
@@ -104,6 +105,13 @@ cmake --build build -j4
 エラーなく終了したら, そのまま, 以下のコマンドで作ったファイルを移動します.
 ```
 cmake --install build
+```
+
+ ### 最新Mac OS
+ 最新のMac OSの更新に伴って, buildが失敗することがあります.
+ 最新版のソースを代わりに試してみてください.
+```
+git clone --branch master --depth=1 https://github.com/root-project/root.git root_src
 ```
 
  ## PATHを通す

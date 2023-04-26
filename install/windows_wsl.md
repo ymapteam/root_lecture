@@ -3,6 +3,7 @@
 WindowsにUbuntuをインストールする。
 
 Microsoft公式の解説: [https://docs.microsoft.com/ja-jp/windows/wsl/install](https://docs.microsoft.com/ja-jp/windows/wsl/install)
+まず, Windows update を行い, Windowsを最新版に更新する.
 
 PowerShell 又はコマンドプロンプト (以下、ターミナルと呼ぶ)を管理者権限で起動し、以下のコマンドを実行する。
 
