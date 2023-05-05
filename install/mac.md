@@ -77,9 +77,14 @@ export PATH=/opt/homebrew/opt/python@3.9/libexec/bin:$PATH
 ```
 cd && mkdir root_build && cd root_build
 ```
-ROOTの最新版をダウンロードします.
+ROOTの最新安定版をダウンロードします.
 ```
 git clone --branch latest-stable --depth=1 https://github.com/root-project/root.git root_src
+```
+最新のMac OSの更新に伴って, buildが失敗することがあります.
+その場合は代わりに最新版を試してください.
+```
+git clone --branch master --depth=1 https://github.com/root-project/root.git root_src
 ```
 
 `ls`などのコマンドで今のディレクトリ以下を見ると,`root_src`ができているはずです.
@@ -107,12 +112,6 @@ cmake --build build -j4
 cmake --install build
 ```
 
- ### 最新Mac OS
- 最新のMac OSの更新に伴って, buildが失敗することがあります.
- 最新版のソースを代わりに試してみてください.
-```
-git clone --branch master --depth=1 https://github.com/root-project/root.git root_src
-```
 
  ## PATHを通す
 `.zprofile`に, PATHを追記します.
