@@ -5,7 +5,6 @@
 ビルド済みバイナリーを使わない場合は[ROOT6をビルド・インストールする](windows_wsl_build.md)へ。
 
 念のため、ROOTをコンパイルするときと同じパッケージを導入する
-
 ```
 sudo apt -y install python3-dev libx11-dev libxpm-dev libxft-dev libxext-dev
 sudo apt -y install libglu1-mesa-dev freeglut3-dev libgl2ps-dev libglew-dev libftgl-dev
@@ -13,7 +12,6 @@ sudo apt -y install libgsl-dev
 ```
 
 CERNはROOTをUbuntu上で動かせる実行ファイルを提供してくれているので、それを導入する。
-
 ```
 cd ~
 mkdir local
@@ -22,8 +20,7 @@ wget https://root.cern/download/root_v6.26.10.Linux-ubuntu22-x86_64-gcc11.3.tar.
 tar -xzvf root_v6.26.10.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
 ```
 
-ROOTにパスを通すため、`~/.bashrc`の末尾に以下の4行を追記する。
-
+ROOTにパスを通すため、`~/.bashrc`ファイルの末尾に以下の4行を追記する。
 ```
 export ROOTSYS=~/local/root
 cd $ROOTSYS
@@ -31,8 +28,15 @@ source bin/thisroot.sh
 cd - > /dev/null
 ```
 
-`~/.bashrc` を再読み込み
+ファイルの追記は自分の好きなテキストエディタ(例: viやpico)を使えばいい。どうしても分からない人は以下のコマンドを実行する。
+```
+echo "export ROOTSYS=~/local/root" >> ~/.bashrc
+echo "cd \$ROOTSYS" >> ~/.bashrc 
+echo "source bin/thisroot.sh" >> ~/.bashrc
+echo "cd - > /dev/null" >> ~/.bashrc
+```
 
+`~/.bashrc` を再読み込み
 ```
 $ source ~/.bashrc
 ```
@@ -40,13 +44,11 @@ $ source ~/.bashrc
 ## ROOTの起動の確認
 
 ROOTを起動する。
-
 ```
 $ root
 ```
 
 以下のように表示されればOK。
-
 ```
    ------------------------------------------------------------------
   | Welcome to ROOT 6.26/10                        https://root.cern |
