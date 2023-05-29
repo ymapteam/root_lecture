@@ -2,9 +2,9 @@
 
 void histogram_1D_zenith(){
     // Construct a 1D histogram
-    const int NBIN_ZENITH = 100; 
-    const int ZENITH_MIN = 0;
-    const int ZENITH_MAX = 180; 
+    const Int_t NBIN_ZENITH = 100; 
+    const Int_t ZENITH_MIN = 0;
+    const Int_t ZENITH_MAX = 180; 
     TH1D* hist = new TH1D("hist_1D_zenith", "Zenith angle;[deg];[events]", NBIN_ZENITH, ZENITH_MIN, ZENITH_MAX);
     // Make the histogram fancy
     hist->SetFillStyle(3001);

@@ -2,9 +2,9 @@
 
 void histogram_1D(){
     // Construct a 1D histogram
-    const int NBIN_ENERGY = 100; 
-    const int ENERGY_MIN = 0;
-    const int ENERGY_MAX = 100000; //100 GeV
+    const Int_t NBIN_ENERGY = 100; 
+    const Int_t ENERGY_MIN = 0;
+    const Int_t ENERGY_MAX = 100000; //100 GeV
     TH1D* hist = /*ここを変えて*/ /*ここを変えて*/("hist_1D", "Count spectrum;Energy [MeV];[events]", /*ここを変えて*/, /*ここを変えて*/, /*ここを変えて*/);
     // Make the histogram fancy
     hist->SetFillStyle(3001);
