@@ -55,7 +55,8 @@ Zoomの配信情報はどなたでも確認いただけますが、質問等は�
 ### 第6回 2023/06/21 (水) 17:00--19:00 (延長あり)
  * 講師 鷲見貴生 (国立天文台), 濱田悠斗 (神戸大)
  * アニメーションプロット, pyroot
- * [資料](./materials/root_lec_hamada_day6.pdf)
+ * [資料(前半)](./materials/washimi_YMAP-ROOTlec_20230621.pdf)
+ * [資料(後半)](./materials/root_lec_hamada_day6.pdf)
 
 
 ## 2022年アンケート結果
