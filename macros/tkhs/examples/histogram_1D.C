@@ -5,7 +5,7 @@ void histogram_1D(){
     const Int_t NBIN_ENERGY = 100; 
     const Int_t ENERGY_MIN = 0;
     const Int_t ENERGY_MAX = 100000; //100 GeV
-    TH1D* hist = /*ここを変えて*/ /*ここを変えて*/("hist_1D", "Count spectrum;Energy [MeV];[events]", /*ここを変えて*/, /*ここを変えて*/, /*ここを変えて*/);
+    TH1D* hist = new TH1D("hist_1D", "Count spectrum;Energy [MeV];[events]", NBIN_ENERGY, ENERGY_MIN, ENERGY_MAX);
     // Make the histogram fancy
     hist->SetFillStyle(3001);
     hist->SetFillColor(kBlue);
@@ -23,7 +23,7 @@ void histogram_1D(){
     Double_t energy, l, b, zenith, azimuth, time;
 
     while(ifs >> energy >> l >> b >> zenith >> azimuth >> time){
-        hist->/*ここを変えて*/;
+        hist->Fill(energy);
     }
   
     // Construct a canvas

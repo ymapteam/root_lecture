@@ -11,7 +11,9 @@ void fitting1(){
   // fitting
   TF1 *f = new TF1("f","[0]*TMath::Exp(-(x-[1])*(x-[1])/[2]/[2])",0,10);
   f->SetParameters(10,5,2);
-  h->Fit(f);
+  h->Fit(f, "L");
+
+  cout << f->GetProb();
   
 }
 

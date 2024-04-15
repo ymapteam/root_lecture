@@ -22,8 +22,9 @@ void fit_hist1_v2(){
 
   // fitting
   TF1 *func = new TF1("func", "gaus(0)", HistMin, HistMax);
-  hist->Fit(func,"L","",2500,3500);
+  hist->Fit(func,"L","",2800,3500);
   cout << "(^o^) chi2/dof = " << func->GetChisquare()/func->GetNDF() << endl;
+  cout << "(^o^) chi2/dof = " << func->GetProb() << endl;
     
 }
 
