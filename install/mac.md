@@ -38,7 +38,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 homebrewが入っていれば, 簡単にインストールすることができます.
 以下のコマンドを実行してください.
 ```
-brew install gcc cmake
+brew install cmake
 brew install --cask xquartz
 ```
 
