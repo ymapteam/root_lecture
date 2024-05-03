@@ -13,11 +13,11 @@ ROOTのソースコードをホームディレクトリにダウンロードし�
 $ cd ~
 $ mkdir root_build
 $ cd root_build
-$ wget https://root.cern/download/root_v6.26.10.source.tar.gz
-$ tar zxvf root_v6.26.10.source.tar.gz
+$ wget https://root.cern/download/root_v6.30.06.source.tar.gz
+$ tar zxvf root_v6.30.06.source.tar.gz
 $ mkdir build
 $ ls
-# build  root-6.26.10  root_v6.26.10.source.tar.gz と出力されるはず
+# build  root-6.30.06  root_v6.30.06.source.tar.gz と出力されるはず
 $ cd build/
 ```
 
@@ -45,11 +45,11 @@ $ sudo apt -y install ninja-build
 
 Ninjaビルドシステム用にcmakeする。それなりに時間がかかる。
 ```
-$ cmake -GNinja ../root-6.26.10 -DCMAKE_INSTALL_PREFIX=~/local/root
+$ cmake -GNinja ../root-6.30.06 -DCMAKE_INSTALL_PREFIX=~/local/root
 ```
 
 最後の方で以下のように出力されてれば成功
-> -- Enabled support for:  asimage builtin_afterimage builtin_clang builtin_cling builtin_llvm builtin_lz4 builtin_lzma builtin_nlohmannjson builtin_openui5 builtin_pcre builtin_tbb builtin_vdt builtin_xrootd builtin_xxhash builtin_zstd clad dataframe exceptions gdml http imt mathmore mlp minuit2 opengl pyroot roofit webgui root7 rpath runtime_cxxmodules shared ssl tmva tmva-cpu spectrum vdt x11 xrootd<br>
+> -- Enabled support for:  asimage builtin_afterimage builtin_clang builtin_cling builtin_llvm builtin_lz4 builtin_lzma builtin_nlohmannjson builtin_openui5 builtin_pcre builtin_tbb builtin_vdt builtin_xrootd builtin_xxhash builtin_zstd clad dataframe gdml http imt mlp opengl proof pyroot roofit webgui root7 rpath runtime_cxxmodules shared ssl tmva spectrum vdt x11 xrootd<br>
 > -- Configuring done<br>
 > -- Generating done<br>
 > -- Build files have been written to: /home/physics/root_build/build
@@ -96,12 +96,12 @@ $ root
 以下のように表示されればOK。
 ```
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.26/10                        https://root.cern |
-  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
-  | Built for linuxx8664gcc on Nov 16 2022, 10:42:54                 |
-  | From tags/v6-26-10@v6-26-10                                      |
-  | With c++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0                   |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+  | Welcome to ROOT 6.30/06                        https://root.cern |
+  | (c) 1995-2024, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on May 03 2024, 12:29:55                 |
+  | From heads/master@tags/v6-30-06                                  |
+  | With c++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0                   |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
    ------------------------------------------------------------------
 
 root [0]
