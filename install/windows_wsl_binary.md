@@ -8,7 +8,7 @@
 ```
 sudo apt -y install python3-dev libx11-dev libxpm-dev libxft-dev libxext-dev
 sudo apt -y install libglu1-mesa-dev freeglut3-dev libgl2ps-dev libglew-dev libftgl-dev
-sudo apt -y install libgsl-dev
+sudo apt -y install libgsl-dev libtbb-dev
 ```
 
 CERNはROOTをUbuntu上で動かせる実行ファイルを提供してくれているので、それを導入する。
@@ -16,8 +16,8 @@ CERNはROOTをUbuntu上で動かせる実行ファイルを提供してくれて
 cd ~
 mkdir local
 cd local
-wget https://root.cern/download/root_v6.26.10.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
-tar -xzvf root_v6.26.10.Linux-ubuntu22-x86_64-gcc11.3.tar.gz
+wget https://root.cern/download/root_v6.30.06.Linux-ubuntu22.04-x86_64-gcc11.4.tar.gz
+tar -xzvf root_v6.30.06.Linux-ubuntu22.04-x86_64-gcc11.4.tar.gz
 ```
 
 ROOTにパスを通すため、`~/.bashrc`ファイルの末尾に以下の4行を追記する。
@@ -51,12 +51,12 @@ $ root
 以下のように表示されればOK。
 ```
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.26/10                        https://root.cern |
-  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
-  | Built for linuxx8664gcc on Nov 16 2022, 10:42:54                 |
-  | From tags/v6-26-10@v6-26-10                                      |
-  | With c++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0                   |
-  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+  | Welcome to ROOT 6.30/06                        https://root.cern |
+  | (c) 1995-2024, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Apr 03 2024, 10:42:17                 |
+  | From tags/v6.30.06-0-g4f4e716372@v6.30.06-0-g4f4e716372          |
+  | With c++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0                   |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
    ------------------------------------------------------------------
 
 root [0]
