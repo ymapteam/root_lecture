@@ -27,30 +27,34 @@ Zoomの配信情報はどなたでも確認いただけますが、質問等は�
 
 講習会は以下の日程で行います。この日程で都合の合わない方向けに、録画した動画も後日配信します。閲覧方法は登録された方に連絡します。
 
-### 第1回 2024/05/13の週, 曜日未定 時間18:00--??
+### 第1回 2024/05/15 (水) 18:00--
 * 講師 水越彗太 (JAXA)
 * 計算機の基礎, ROOTのインストールフォローアップ
 * [資料](./materials/root_lec_mzks_day1.pdf)
 * [インストール向け資料](./materials/root_lec_mzks_install.pdf)
 
-### 第2回
+### 第2回 2024/05/22 (水) 18:00--
 * 講師 水越彗太 (JAXA)
 * C++, ROOTマクロ, ヒストグラムの基礎
 * [資料](./materials/root_lec_mzks_day2.pdf)
 
 ### 第3回
  * 統計、ヒストグラム
+ * 資料準備中
  * [資料](./materials/root_lec_tkhs_day3.pdf)
 
 ### 第4回
  * TF1, Fitting, TGraph
+ * 資料準備中
  * [資料](./materials/root_lec_nkmr_day4.pdf)
 
 ### 第5回
  * 乱数, TTree
+ * 資料準備中
  * [資料](./materials/root_lec_itoh_day5.pdf)
 
 ### 第6回
+ * 資料準備中
  * pyroot
 
 
