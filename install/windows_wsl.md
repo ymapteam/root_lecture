@@ -26,7 +26,7 @@ WSL カーネル はインストールされました。
 と出てくるので、パソコンを再起動する。ターミナルを開き、コマンド`wsl`を実行して、Ubuntuにログインしようとすると「Installing, this may take a few minutes...」と出てくるのでしばらく待つ。初期化が終わると、ユーザー名とパスワードを入力する。ターミナル上ではパスワードは表示されないが、正しく入力すれば良い。
 
 ```
-Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.90.1-microsoft-standard-WSL2 x86_64)
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.146.1-microsoft-standard-WSL2 x86_64)
 
 (中略)
 
@@ -49,7 +49,7 @@ $ cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=22.04
 DISTRIB_CODENAME=jammy
-DISTRIB_DESCRIPTION="Ubuntu 22.04.2 LTS"
+DISTRIB_DESCRIPTION="Ubuntu 22.04.3 LTS"
 ```
 
 インストールパッケージをアップデートする。 `-y` は途中のYes/No質問を自動で全てYesにするオプション。
@@ -151,4 +151,4 @@ wsl --unregister Ubuntu
 
 `登録解除。この操作を正しく終了しました。`と出たらアンインストール完了である。警告なしでUbuntu内のファイルは全て消えるので注意。
 
-`wsl --install Ubuntu`からやり直せば良い。再起動は必要ない。
+`wsl --install Ubuntu`からやり直せば良い。OSの再起動は必要ない。
