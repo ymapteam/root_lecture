@@ -38,7 +38,7 @@ physics@DESKTOP-AAAAAAA:~$
 
 ## 事前の準備
 
-Ubuntuのバージョンを確認しておく。以下、`$`から始まるコマンドは、ターミナル上のUbuntuのコマンドである。`$ `を入力する必要はない。
+Ubuntuのバージョンを確認する。以下、`$`から始まるコマンドは、ターミナル上のUbuntuのコマンドである。`$ `を入力する必要はない。
 
 ```
 $ cat /etc/lsb-release
@@ -51,6 +51,8 @@ DISTRIB_RELEASE=22.04
 DISTRIB_CODENAME=jammy
 DISTRIB_DESCRIPTION="Ubuntu 22.04.3 LTS"
 ```
+
+DISTRIB_RELEASE が 22.04 になっていればOK。古い場合はUbuntuのバージョンをアップグレードする(Google先生へ)。
 
 インストールパッケージをアップデートする。 `-y` は途中のYes/No質問を自動で全てYesにするオプション。
 
