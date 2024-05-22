@@ -8,7 +8,7 @@
 ```
 sudo apt -y install python3-dev libx11-dev libxpm-dev libxft-dev libxext-dev
 sudo apt -y install libglu1-mesa-dev freeglut3-dev libgl2ps-dev libglew-dev libftgl-dev
-sudo apt -y install libgsl-dev libtbb-dev
+sudo apt -y install libgsl-dev libtbb-dev libtiff5
 ```
 
 CERNはROOTをUbuntu上で動かせる実行ファイルを提供してくれているので、それを導入する。
