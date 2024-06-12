@@ -79,9 +79,9 @@ Zoomの配信情報はどなたでも確認いただけますが、質問等は�
  * [資料](./materials/root_lec_nkmr_day4.pdf)
 
 ### 第5回 2024/06/12 (水) 18:00--
- * 乱数, TTree
- * 資料準備中
- * [資料](./materials/root_lec_itoh_day5.pdf)
+ * 講師 水越彗太 (JAXA)
+ * Tree
+ * [資料](./materials/root_lec_mzks_day5.pdf)
 
 ### 第6回 2024/06/19 (水) 18:00--
  * pyroot
