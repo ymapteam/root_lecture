@@ -90,7 +90,7 @@ git clone --branch master --depth=1 https://github.com/root-project/root.git roo
 `ls`などのコマンドで今のディレクトリ以下を見ると,`root_src`ができているはずです.
 ビルドのための設定をcmakeで行います.
 ```
-cmake -B build -S root_src -DCMAKE_INSTALL_PREFIX=~/local/root/6.26.10
+cmake -B build -S root_src -DCMAKE_INSTALL_PREFIX=~/local/root/6.36.00
 ```
 最後に, 
 ```
@@ -120,7 +120,7 @@ PATHとはコマンドを探してくる場所のリストです.
 但し, mzksなどのユーザー名は自分のものに適宜読み替えてください.
 ファイルがなければ新規作成し, あれば下の方に追記すればOKです.
 ```
-cd /Users/mzks/local/root/6.26.10/bin
+cd /Users/mzks/local/root/6.36.00/bin
 source thisroot.sh
 cd
 ```
@@ -128,7 +128,7 @@ cd
 よくわからなければ, 以下のコマンドを実行してください.
 ```
 cd
-echo "cd /Users/mzks/local/root/6.26.10/bin" >> .zprofile
+echo "cd /Users/mzks/local/root/6.36.00/bin" >> .zprofile
 echo "source thisroot.sh" >> .zprofile
 echo "cd" >> .zprofile
 ```
@@ -136,10 +136,10 @@ echo "cd" >> .zprofile
 ここで, ターミナルを再起動して, `root`と打ち込んでEnterキーを押し, 以下の出力が出てこれば成功です.
 ```
    ------------------------------------------------------------------
-  | Welcome to ROOT 6.26/10                        https://root.cern |
+  | Welcome to ROOT 6.36.00                        https://root.cern |
   | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
   | Built for macosxarm64 on Mar 03 2022, 06:51:13                   |
-  | From tags/v6-26-00@v6-26-10                                      |
+  | From tags/v6-26-00@v6-36.00                                      |
   | With Apple clang version 13.0.0 (clang-1300.0.29.30)             |
   | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
    ------------------------------------------------------------------
@@ -154,7 +154,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     eval (/opt/homebrew/bin/brew shellenv)
 
-    source /Users/mzks/local/root/6.26.10/bin/thisroot.fish
+    source /Users/mzks/local/root/6.36.00/bin/thisroot.fish
 end
 ```
 
