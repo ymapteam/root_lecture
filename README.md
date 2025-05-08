@@ -14,7 +14,7 @@ YMAP ROOT講習会は、研究室配属1年目の学生を対象とし、コン�
 ## 参加方法
 
 まず、2025年度ROOT講習会[登録フォーム](https://forms.gle/Zs4WNB3pK5KEcArV9)にて登録をお願いします。
-また、連絡用チャットツール[Discord](https://discord.gg/YW862xxd)に登録してください。
+また、連絡用チャットツール[Discord](https://discord.gg/pAzurwrBXw)に登録してください。
 講習会は、ビデオ会議Zoomを使って行い、講習会中を含めた質問等の受付はSlackを通じて行います。
 Zoomの配信情報はどなたでも確認いただけますが、質問等は全てSlack内で行いますので、必要な方は必ず登録をお願いします。
 
